@@ -7,7 +7,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `appointment_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `appointment_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `appointment_type` (
   `updated_user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `client_id` (`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `appointment_type_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `appointment_type_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE `appointment_type_user` (
   `updated_user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `client_id` (`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,7 +87,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `client`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `client` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client` varchar(255) DEFAULT NULL,
@@ -139,7 +139,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `client_range`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `client_range` (
   `client_id` int(11) NOT NULL,
   `test_id` int(11) NOT NULL,
@@ -172,7 +172,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `client_range_default`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `client_range_default` (
   `test_id` int(11) NOT NULL,
   `range_low` decimal(5,1) DEFAULT NULL,
@@ -205,7 +205,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `encounter`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `encounter` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -239,7 +239,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `form`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `form` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -270,7 +270,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `lab`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `lab` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -309,7 +309,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `lab_test`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `lab_test` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -343,7 +343,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `patient`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `patient` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -404,7 +404,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `patient_accounting`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `patient_accounting` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -439,7 +439,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `patient_form`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `patient_form` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -467,7 +467,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `patient_message`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `patient_message` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -509,7 +509,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `support`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `support` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -540,7 +540,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `support_message`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `support_message` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `support_id` int(11) DEFAULT NULL,
@@ -572,7 +572,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `test`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `test` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
@@ -601,7 +601,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `test_name`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `test_name` (
   `test_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -630,7 +630,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -675,7 +675,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_calendar`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `user_calendar` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -709,7 +709,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `user_log` (
   `dt` datetime DEFAULT CURRENT_TIMESTAMP,
   `client_id` int(11) DEFAULT NULL,
@@ -736,7 +736,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_login`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `user_login` (
   `user_id` int(11) DEFAULT NULL,
   `client_id` int(11) DEFAULT NULL,
@@ -762,7 +762,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_schedule`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `user_schedule` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `client_id` int(11) DEFAULT NULL,
@@ -795,7 +795,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_sql`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `user_sql` (
   `dt` datetime DEFAULT NULL,
   `client_id` int(11) DEFAULT NULL,
