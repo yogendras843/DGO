@@ -1,0 +1,6 @@
+mysql -u root -p
+create database clinios;
+create user 'app'@'localhost' identified with mysql_native_password by '123456';
+grant all privileges on clinios.* to 'app'@'localhost';
+exit;
+mysql -u root -p clinios < db.sql
